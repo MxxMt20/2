@@ -136,16 +136,16 @@ def page_4():
     for i in range(len(messages_list)):
         messages_list[i] = messages_list[i].split('#')
     for i in messages_list:
-        if i[1]=='柚子老师':
+        if i[1]=='生存类':
             with st.chat_message('1'):
                 st.write(i[1],':',i[2])
-        elif i[1]=='编程猫':
+        elif i[1]=='科技类':
             with st.chat_message('2'):
                 st.write(i[1],':',i[2])
-        elif i[1]=='阿短':
+        elif i[1]=='魔改类':
             with st.chat_message('2'):
                 st.write(i[1],':',i[2])
-    name = st.selectbox('我是.….',['阿短','编程猫','柚子老师'])
+    name = st.selectbox('我是.….',['生存类','科技类','魔改类'])
     new_message = st.text_input('想要说的话......')
     if st.button('留言'):
         messages_list.append([str(int(messages_list[-1][0])+1),name,new_message])
